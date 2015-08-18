@@ -2,16 +2,10 @@
 var express = require('express');
 var mongojs = require('mongojs');
 var bodyParser = require('body-parser');
-// var parse = require('parse'); // Update db
+var parse = require('parse'); // Update db on page load
 
 // Connect DB
-var mongo_uri = process.env.MONGOLAB_URI;
-var db = mongojs(mongo_uri, ['pieces']);
-
-// Make searchable fields
-db.pieces.createIndex({"title": "text"});
-db.pieces.createIndex({"summary":"text"});
-db.pieces.createIndex({"description":"text"});
+var db = require('./db.js').db;
 
 var app = express();
 
