@@ -12,7 +12,7 @@ var app = express();
 
 app.use(bodyParser.json());
 
-app.use(express.static('./public'));
+app.use('/', express.static('./public/index.html'));
 app.use('/yasmin', express.static('.public/yasmin.html'));
 app.use('/sean', express.static('./public/sean.html'));
 app.use('/eric', express.static('./public/eric.html'));
