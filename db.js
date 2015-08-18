@@ -1,3 +1,5 @@
+var mongojs = require('mongojs');
+
 // Connect db
 var mongo_uri = process.env.MONGOLAB_URI;
 var db = mongojs(mongo_uri, ['pieces']);
