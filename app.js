@@ -33,7 +33,7 @@ app.use('/matthew', express.static('./public/matthew.html'));
 
 app.get('/yasminlist', function(req, res) {
 
-  var query = 'relationships || drugs || cocaine || heroine || methamphetamine || crack || health || work || food';
+  var query = 'relationships || drugs || cocaine || heroin || methamphetamine || crack || health || work || food';
 
   db.pieces.find(
     {$text: {$search: query}}
