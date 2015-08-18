@@ -1,0 +1,25 @@
+{
+  "name": "newsagg",
+  "version": "1.0.0",
+  "description": "A news aggregator for Inverse writers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claytongentry/NewsAgg.git"
+  },
+  "keywords": [
+    "news",
+    "aggregator",
+    "rss",
+    "feed"
+  ],
+  "author": "Clayton Gentry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claytongentry/NewsAgg/issues"
+  },
+  "homepage": "https://github.com/claytongentry/NewsAgg#readme"
+}
