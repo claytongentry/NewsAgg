@@ -12,8 +12,8 @@ var app = express();
 
 app.use(bodyParser.json());
 
-process.env.PWD = process.cwd();
-var route_home = process.env.PWD + '/public/';
+var route_home = __dirname + '/public/';
+console.log(route_home);
 
 app.use(express.static(route_home + 'index.html'));
 app.use('/yasmin', express.static(route_home + 'yasmin.html'));
