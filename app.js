@@ -2,7 +2,7 @@
 var express = require('express');
 var mongojs = require('mongojs');
 var bodyParser = require('body-parser');
-var parse = require('parse'); // Update db on page load
+var parse = require('./parse'); // Update db on page load
 
 // Connect DB
 var db = require('./db.js').db;
