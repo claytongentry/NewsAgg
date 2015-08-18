@@ -12,7 +12,7 @@ var app = express();
 
 app.use(bodyParser.json());
 
-var path = process.env.PWD + '/public';
+var path = process.cwd() + '/public';
 
 app.use(express.static(path));
 app.use('/yasmin', express.static(path + '/yasmin.html'));
