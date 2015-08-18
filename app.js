@@ -12,27 +12,27 @@ var app = express();
 
 app.use(bodyParser.json());
 
-var route_home = __dirname + '/public/';
+var route_home = __dirname + '/public';
 console.log(route_home);
 
-app.use(express.static(route_home + 'index.html'));
-app.use('/yasmin', express.static(route_home + 'yasmin.html'));
-app.use('/sean', express.static(route_home + 'sean.html'));
-app.use('/eric', express.static(route_home + 'eric.html'));
-app.use('/lauren', express.static(route_home + 'lauren.html'));
-app.use('/neel', express.static(route_home + 'neel.html'));
-app.use('/ben', express.static(route_home + 'ben.html'));
-app.use('/andrew', express.static(route_home + 'andrew.html'));
-app.use('/sarah', express.static(route_home + 'sarah.html'));
-app.use('/hma', express.static(route_home + 'hma.html'));
-app.use('/rugg', express.static(route_home + 'rugg.html'));
-app.use('/corban', express.static(route_home + 'corban.html'));
-app.use('/winston', express.static(route_home + 'winston.html'));
-app.use('/david', express.static(route_home + 'david.html'));
-app.use('/colin', express.static(route_home + 'colin.html'));
-app.use('/sam', express.static(route_home + 'sam.html'));
-app.use('/gem', express.static(route_home + 'gem.html'));
-app.use('/matthew', express.static(route_home + 'matthew.html'));
+app.use(express.static(route_home));
+app.use('/yasmin', express.static(route_home + '/yasmin.html'));
+app.use('/sean', express.static(route_home + '/sean.html'));
+app.use('/eric', express.static(route_home + '/eric.html'));
+app.use('/lauren', express.static(route_home + '/lauren.html'));
+app.use('/neel', express.static(route_home + '/neel.html'));
+app.use('/ben', express.static(route_home + '/ben.html'));
+app.use('/andrew', express.static(route_home + '/andrew.html'));
+app.use('/sarah', express.static(route_home + '/sarah.html'));
+app.use('/hma', express.static(route_home + '/hma.html'));
+app.use('/rugg', express.static(route_home + '/rugg.html'));
+app.use('/corban', express.static(route_home + '/corban.html'));
+app.use('/winston', express.static(route_home + '/winston.html'));
+app.use('/david', express.static(route_home + '/david.html'));
+app.use('/colin', express.static(route_home + '/colin.html'));
+app.use('/sam', express.static(route_home + '/sam.html'));
+app.use('/gem', express.static(route_home + '/gem.html'));
+app.use('/matthew', express.static(route_home + '/matthew.html'));
 
 app.get('/yasminlist', function(req, res) {
 
