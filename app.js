@@ -2,37 +2,41 @@
 var express = require('express');
 var mongojs = require('mongojs');
 var bodyParser = require('body-parser');
-// var parse = require('parse');
+// var parse = require('parse'); // Update db
 
 // Connect DB
 var mongo_uri = process.env.MONGOLAB_URI;
 var db = mongojs(mongo_uri, ['pieces']);
 
+// Make searchable fields
+db.pieces.createIndex({"title": "text"});
+db.pieces.createIndex({"summary":"text"});
+db.pieces.createIndex({"description":"text"});
+
 var app = express();
 
 app.use(bodyParser.json());
 
-var route_home = __dirname + '/public';
-console.log(route_home);
+var path = __dirname + '/public';
 
-app.use(express.static(route_home));
-app.use('/yasmin', express.static(route_home + '/yasmin.html'));
-app.use('/sean', express.static(route_home + '/sean.html'));
-app.use('/eric', express.static(route_home + '/eric.html'));
-app.use('/lauren', express.static(route_home + '/lauren.html'));
-app.use('/neel', express.static(route_home + '/neel.html'));
-app.use('/ben', express.static(route_home + '/ben.html'));
-app.use('/andrew', express.static(route_home + '/andrew.html'));
-app.use('/sarah', express.static(route_home + '/sarah.html'));
-app.use('/hma', express.static(route_home + '/hma.html'));
-app.use('/rugg', express.static(route_home + '/rugg.html'));
-app.use('/corban', express.static(route_home + '/corban.html'));
-app.use('/winston', express.static(route_home + '/winston.html'));
-app.use('/david', express.static(route_home + '/david.html'));
-app.use('/colin', express.static(route_home + '/colin.html'));
-app.use('/sam', express.static(route_home + '/sam.html'));
-app.use('/gem', express.static(route_home + '/gem.html'));
-app.use('/matthew', express.static(route_home + '/matthew.html'));
+app.use(express.static(path));
+app.use('/yasmin', express.static(path + '/yasmin.html'));
+app.use('/sean', express.static(path + '/sean.html'));
+app.use('/eric', express.static(path + '/eric.html'));
+app.use('/lauren', express.static(path + '/lauren.html'));
+app.use('/neel', express.static(path + '/neel.html'));
+app.use('/ben', express.static(path + '/ben.html'));
+app.use('/andrew', express.static(path + '/andrew.html'));
+app.use('/sarah', express.static(path + '/sarah.html'));
+app.use('/hma', express.static(path + '/hma.html'));
+app.use('/rugg', express.static(path + '/rugg.html'));
+app.use('/corban', express.static(path + '/corban.html'));
+app.use('/winston', express.static(path + '/winston.html'));
+app.use('/david', express.static(path + '/david.html'));
+app.use('/colin', express.static(path + '/colin.html'));
+app.use('/sam', express.static(path + '/sam.html'));
+app.use('/gem', express.static(path + '/gem.html'));
+app.use('/matthew', express.static(path + '/matthew.html'));
 
 app.get('/yasminlist', function(req, res) {
 
@@ -70,7 +74,7 @@ app.get('/seanlist', function(req, res) {
 
 app.get('/ericlist', function(req, res) {
 
-  var query = 'Star Wars || Heroes of the Storm || No Man\'s Sky || Convention || Marvel || esports || The Walking Dead || VR Gaming || Star Trek || comics || video games || superhero || televeision || tv show || movie';
+  var query = 'Star Wars || Heroes of the Storm || No Man\'s Sky || Convention || Marvel || esports || The Walking Dead || VR Gaming || Star Trek || comics || video games || superhero || television || tv show || movie';
 
   db.pieces.find(
     {$text: {$search: query}}
@@ -106,7 +110,7 @@ app.get('/laurenlist', function(req, res) {
 
 
 app.get('/neellist', function(req, res) {
-  var query = 'Elon Musk || NASA || SpaceX || Bill Gates || \'Space tourism\' || \'Deep Future\'';
+  var query = 'Elon Musk || NASA || SpaceX || Bill Gates || Space tourism' || 'Deep Future';
 
   db.pieces.find(
     {$text: {$search: query}}
@@ -218,7 +222,7 @@ app.get('/corbanlist', function(req, res) {
 });
 
 app.get('/winstonlist', function(req, res) {
-  var query = 'Kanye West || Radiohead || Show me a Hero || Straight Outta Compton || NWA || ';
+  var query = 'Kanye West || Radiohead || Show me a Hero || Straight Outta Compton || NWA';
 
   db.pieces.find(
     {$text: {$search: query}}
