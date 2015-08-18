@@ -12,9 +12,11 @@ var app = express();
 
 app.use(bodyParser.json());
 
-app.use('/', express.static('./public/index.html'));
-app.use('/yasmin', express.static('.public/yasmin.html'));
-app.use('/sean', express.static('./public/sean.html'));
+var route_home = __dirname + '/public/';
+
+app.use('/', express.static(route_home + 'index.html'));
+app.use('/yasmin', express.static(route_home + 'yasmin.html'));
+app.use('/sean', express.static(route_home + 'sean.html'));
 app.use('/eric', express.static('./public/eric.html'));
 app.use('/lauren', express.static('./public/lauren.html'));
 app.use('/neel', express.static('./public/neel.html'));
