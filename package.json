@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/claytongentry/NewsAgg/issues"
   },
-  "homepage": "https://github.com/claytongentry/NewsAgg#readme"
+  "homepage": "https://github.com/claytongentry/NewsAgg#readme",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mongojs": "^1.3.0"
+  }
 }
