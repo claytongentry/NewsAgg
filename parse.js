@@ -17,6 +17,10 @@ var requests = [
   'https://www.reddit.com/r/science/.rss',
   'https://www.reddit.com/r/tech/.rss',
   'https://www.reddit.com/r/kanye/.rss',
+  'https://www.reddit.com/r/psychology/.rss',
+  'https://www.reddit.com/r/askscience/.rss',
+  'http://www.newyorker.com/feed/tech',
+  'http://press.nationalgeographic.com/feed/',
   'http://feeds.washingtonpost.com/rss/rss_comic-riffs',
   'http://hnrss.org/newest',
   'http://news.google.com/?output=rss'
@@ -32,7 +36,7 @@ function read_rss(source) {
   var req = request(source);
 
   req.on('error', function(error) {
-    console.log("AAHHHHH: " + error);
+    console.log("ERROR: " + error);
   });
 
   req.on('response', function(res) {
@@ -52,7 +56,6 @@ function read_rss(source) {
         item;
     while (item = stream.read()) {
         // Only add to db if it's not already there
-        console.log(item);
         db.pieces.update(
         {title:item.title},
         {$set:{

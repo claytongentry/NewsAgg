@@ -45,7 +45,7 @@ app.get('/yasminlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -62,7 +62,7 @@ app.get('/seanlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -79,7 +79,7 @@ app.get('/ericlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 
 });
@@ -97,7 +97,7 @@ app.get('/laurenlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 
 });
@@ -115,7 +115,7 @@ app.get('/neellist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -131,7 +131,7 @@ app.get('/benlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -147,7 +147,7 @@ app.get('/andrewlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -163,7 +163,7 @@ app.get('/sarahlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -179,7 +179,7 @@ app.get('/hmalist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -195,7 +195,7 @@ app.get('/rugglist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -211,7 +211,7 @@ app.get('/corbanlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -227,7 +227,7 @@ app.get('/winstonlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -243,7 +243,7 @@ app.get('/davidlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -259,7 +259,7 @@ app.get('/colinlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -275,7 +275,7 @@ app.get('/samlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -291,7 +291,7 @@ app.get('/gemlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
@@ -307,7 +307,7 @@ app.get('/matthewlist', function(req, res) {
           console.error(err);
         }
         else if (docs.length > 0) res.json(docs);
-        else res.send("I got nothing.");
+        else res.send("No results.");
     });
 });
 
