@@ -18,6 +18,7 @@ var requests = [
   'http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml',
   'http://rss.nytimes.com/services/xml/rss/nyt/Health.xml',
   'http://rss.nytimes.com/services/xml/rss/nyt/Research.xml',
+  'http://feeds.feedburner.com/nybooks',
   'https://www.reddit.com/r/internetisbeautiful/.rss',
   'https://www.reddit.com/r/science/.rss',
   'https://www.reddit.com/r/tech/.rss',
@@ -50,10 +51,16 @@ var requests = [
   'http://news.google.com/?output=rss'
 ];
 
+// Read read read
 requests.forEach(function(current) {
   read_rss(current);
 });
 
+
+/**
+* Implements RSS reader using Feedparser module
+* Adds article to mongoDB if it's not already there
+*/
 function read_rss(source) {
 
   var feedparser = new Feedparser();
