@@ -40,6 +40,7 @@ var requests = [
   'http://phys.org/rss-feed/technology-news/software/',
   'http://phys.org/rss-feed/earth-news/environment/',
   'http://www.newyorker.com/feed/tech',
+  'http://feeds.wired.com/wired/index',
   'http://www.wired.com/category/science/feed/',
   'http://www.wired.com/category/gear/feed/',
   'http://www.wired.com/category/underwire/feed/',

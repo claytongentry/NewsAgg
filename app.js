@@ -32,9 +32,18 @@ app.use('/sam', express.static(path + '/sam.html'));
 app.use('/gem', express.static(path + '/gem.html'));
 app.use('/matthew', express.static(path + '/matthew.html'));
 
+// Master list
+app.get('/all', function(req, res) {
+  db.pieces.find().sort({pubDate: -1}, function(err, docs) {
+    if (err) res.send(err);
+    else if (docs.length > 0) res.json(docs);
+    else res.send("No results.");
+  });
+});
+
 app.get('/yasminlist', function(req, res) {
 
-  var query = 'relationships || drugs || cocaine || heroin || methamphetamine || crack || health || work || food';
+  var query = 'relationships || illegal drugs || cocaine || heroin || methamphetamine || crack || health || work || food';
 
   db.pieces.find(
     {$text: {$search: query}}
