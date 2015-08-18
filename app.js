@@ -12,26 +12,27 @@ var app = express();
 
 app.use(bodyParser.json());
 
-var route_home = __dirname + '/public/';
+process.env.PWD = process.cwd();
+var route_home = process.env.PWD + '/public/';
 
-app.use('/', express.static(route_home + 'index.html'));
+app.use(express.static(route_home + 'index.html'));
 app.use('/yasmin', express.static(route_home + 'yasmin.html'));
 app.use('/sean', express.static(route_home + 'sean.html'));
-app.use('/eric', express.static('./public/eric.html'));
-app.use('/lauren', express.static('./public/lauren.html'));
-app.use('/neel', express.static('./public/neel.html'));
-app.use('/ben', express.static('./public/ben.html'));
-app.use('/andrew', express.static('./public/andrew.html'));
-app.use('/sarah', express.static('./public/sarah.html'));
-app.use('/hma', express.static('./public/hma.html'));
-app.use('/rugg', express.static('./public/rugg.html'));
-app.use('/corban', express.static('./public/corban.html'));
-app.use('/winston', express.static('./public/winston.html'));
-app.use('/david', express.static('./public/david.html'));
-app.use('/colin', express.static('./public/colin.html'));
-app.use('/sam', express.static('./public/sam.html'));
-app.use('/gem', express.static('./public/gem.html'));
-app.use('/matthew', express.static('./public/matthew.html'));
+app.use('/eric', express.static(route_home + 'eric.html'));
+app.use('/lauren', express.static(route_home + 'lauren.html'));
+app.use('/neel', express.static(route_home + 'neel.html'));
+app.use('/ben', express.static(route_home + 'ben.html'));
+app.use('/andrew', express.static(route_home + 'andrew.html'));
+app.use('/sarah', express.static(route_home + 'sarah.html'));
+app.use('/hma', express.static(route_home + 'hma.html'));
+app.use('/rugg', express.static(route_home + 'rugg.html'));
+app.use('/corban', express.static(route_home + 'corban.html'));
+app.use('/winston', express.static(route_home + 'winston.html'));
+app.use('/david', express.static(route_home + 'david.html'));
+app.use('/colin', express.static(route_home + 'colin.html'));
+app.use('/sam', express.static(route_home + 'sam.html'));
+app.use('/gem', express.static(route_home + 'gem.html'));
+app.use('/matthew', express.static(route_home + 'matthew.html'));
 
 app.get('/yasminlist', function(req, res) {
 
