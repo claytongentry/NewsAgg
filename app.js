@@ -241,7 +241,7 @@ app.get('/winstonlist', function(req, res) {
 });
 
 app.get('/davidlist', function(req, res) {
-  var query = 'podcast || twitter || Chvrches || Kurt Vile || Grimes || We are your friends';
+  var query = 'podcast || twitter || Chvrches || Kurt Vile || Grimes';
 
   db.pieces.find(
     {$text: {$search: query}}
@@ -257,7 +257,7 @@ app.get('/davidlist', function(req, res) {
 });
 
 app.get('/colinlist', function(req, res) {
-  var query = 'drugs || weed || marijuana || stand-up || comedy || fast food || blunt talk';
+  var query = 'drugs || weed || marijuana || high || stand-up || comedy || fast food || blunt talk';
 
   db.pieces.find(
     {$text: {$search: query}}
