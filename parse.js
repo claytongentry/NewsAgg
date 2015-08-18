@@ -48,7 +48,9 @@ var requests = [
   'http://press.nationalgeographic.com/feed/',
   'http://feeds.washingtonpost.com/rss/rss_comic-riffs',
   'http://hnrss.org/newest',
-  'http://news.google.com/?output=rss'
+  'http://news.google.com/?output=rss',
+  'http://www.nasa.gov/rss/dyn/solar_system.rss',
+  'http://www.nasa.gov/rss/dyn/breaking_news.rss'
 ];
 
 // Read read read

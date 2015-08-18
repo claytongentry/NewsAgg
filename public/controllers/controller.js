@@ -1,6 +1,10 @@
 var AggApp = angular.module('AggApp', []);
 AggApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
 
+    $http.get('/all').success(function(response) {
+      $scope.all = response;
+    });
+    
     $http.get('/yasminlist').success(function(response) {
       $scope.yasminlist = response;
     });
