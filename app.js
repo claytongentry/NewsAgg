@@ -5,7 +5,8 @@ var bodyParser = require('body-parser');
 // var parse = require('parse');
 
 // Connect DB
-var mongo_uri = process.env.MONGOLAB_URI;
+// var mongo_uri = process.env.MONGOLAB_URI;
+var mongo_uri = 'mongodb://aggyJohnson:N33lPat3l@ds033123.mongolab.com:33123/heroku_kkvg74j2';
 var db = mongojs(mongo_uri, ['pieces']);
 
 var app = express();
@@ -14,26 +15,26 @@ app.use(bodyParser.json());
 
 process.env.PWD = process.cwd();
 
-var path = process.env.PWD + '/public';
+var route_home = process.env.PWD + '/public';
 
-app.use(express.static(path));
-app.use('/yasmin', express.static(path + '/yasmin.html'));
-app.use('/sean', express.static(path + '/sean.html'));
-app.use('/eric', express.static(path + '/eric.html'));
-app.use('/lauren', express.static(path + '/lauren.html'));
-app.use('/neel', express.static(path + '/neel.html'));
-app.use('/ben', express.static(path + '/ben.html'));
-app.use('/andrew', express.static(path + '/andrew.html'));
-app.use('/sarah', express.static(path + '/sarah.html'));
-app.use('/hma', express.static(path + '/hma.html'));
-app.use('/rugg', express.static(path + '/rugg.html'));
-app.use('/corban', express.static(path + '/corban.html'));
-app.use('/winston', express.static(path + '/winston.html'));
-app.use('/david', express.static(path + '/david.html'));
-app.use('/colin', express.static(path + '/colin.html'));
-app.use('/sam', express.static(path + '/sam.html'));
-app.use('/gem', express.static(path + '/gem.html'));
-app.use('/matthew', express.static(path + '/matthew.html'));
+app.use(express.static(route_home));
+app.use('/yasmin', express.static(route_home + '/yasmin.html'));
+app.use('/sean', express.static(route_home + '/sean.html'));
+app.use('/eric', express.static(route_home + '/eric.html'));
+app.use('/lauren', express.static(route_home + '/lauren.html'));
+app.use('/neel', express.static(route_home + '/neel.html'));
+app.use('/ben', express.static(route_home + '/ben.html'));
+app.use('/andrew', express.static(route_home + '/andrew.html'));
+app.use('/sarah', express.static(route_home + '/sarah.html'));
+app.use('/hma', express.static(route_home + '/hma.html'));
+app.use('/rugg', express.static(route_home + '/rugg.html'));
+app.use('/corban', express.static(route_home + '/corban.html'));
+app.use('/winston', express.static(route_home + '/winston.html'));
+app.use('/david', express.static(route_home + '/david.html'));
+app.use('/colin', express.static(route_home + '/colin.html'));
+app.use('/sam', express.static(route_home + '/sam.html'));
+app.use('/gem', express.static(route_home + '/gem.html'));
+app.use('/matthew', express.static(route_home + '/matthew.html'));
 
 app.get('/yasminlist', function(req, res) {
 
@@ -314,6 +315,6 @@ app.get('/matthewlist', function(req, res) {
     });
 });
 
-var port = process.env.PORT || 3000;
+var port = Number(process.env.PORT || 3000);
 app.listen(3000);
 console.log("Cookin' on port " + port + '...');
