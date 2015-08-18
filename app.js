@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
-var path = __dirname + '/public';
+var path = process.env.PWD + '/public';
 
 app.use(express.static(path));
 app.use('/yasmin', express.static(path + '/yasmin.html'));
