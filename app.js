@@ -5,8 +5,7 @@ var bodyParser = require('body-parser');
 // var parse = require('parse');
 
 // Connect DB
-// var mongo_uri = process.env.MONGOLAB_URI;
-var mongo_uri = 'mongodb://aggyJohnson:N33lPat3l@ds033123.mongolab.com:33123/heroku_kkvg74j2';
+var mongo_uri = process.env.MONGOLAB_URI;
 var db = mongojs(mongo_uri, ['pieces']);
 
 var app = express();
