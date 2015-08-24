@@ -2,22 +2,22 @@
 <html ng-app='AggApp'>
 <head>
   <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'/>
-  <title>Matthew's Newsfeed</title>
+  <title>Matt's Newsfeed</title>
 </head>
 <body>
   <div class='container ng-cloak' ng-controller='AppCtrl'>
-    <h1>Matthew's News</h1>
+    <h1>Matt's News</h1>
     <table class='table'>
       <thead>
-        <tr>
-          <th>Headline</th>
-          <th>Date Posted</th>
+        <tr class='row'>
+          <th class='col-sm-9'>Headline</th>
+          <th class=col-sm-3>Date Posted</th>
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="story in matthewlist">
-          <td><a target="_blank" ng-href='{{story.link}}'>{{story.title}}</a></td>
-          <td>{{story.pubDate | date: 'MMM dd, hh:mm a'}}</td>
+        <tr class='row' ng-repeat="story in matthewlist">
+          <td class='col-sm-9'><a target="_blank" ng-href='{{story.link}}'>{{story.title}}</a></td>
+          <td class='col-sm-3'>{{story.pubDate | date: 'MMM dd, hh:mm a'}}</td>
         </tr>
       </tbody>
     </table>
