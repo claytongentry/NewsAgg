@@ -15,9 +15,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="story in yasminlist">
-          <td><a target="_blank" ng-href='{{story.link}}'>{{story.title}}</a></td>
-          <td>{{story.pubDate | date: 'MMM dd, hh:mm a'}}</td>
+        <tr class='row' ng-repeat="story in yasminlist">
+          <td class='col-sm-9'><a target="_blank" ng-href='{{story.link}}'>{{story.title}}</a></td>
+          <td class='col-sm-3'>{{story.pubDate | date: 'MMM dd, hh:mm a'}}</td>
         </tr>
       </tbody>
     </table>
